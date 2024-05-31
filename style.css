@@ -32,6 +32,13 @@ h1 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.vehicle-list li.selected {
+    background-color: #cce5ff;
 }
 
 .vehicle-list img {
@@ -49,7 +56,6 @@ h1 {
 input[type="text"],
 input[type="date"],
 input[type="time"],
-select,
 button {
     width: 100%;
     padding: 10px;
