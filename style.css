@@ -34,6 +34,13 @@ button {
     margin-bottom: 15px;
 }
 
+/* Adjust image size */
+.vehicle-list img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space between images */
+}
+
 /* Responsive Typography */
 @media only screen and (min-width: 768px) {
     /* Desktop Styles */
@@ -66,8 +73,7 @@ button {
 
     /* Adjust image size */
     .vehicle-list img {
-        width: 60px; /* Decreased image width for smaller screens */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 80px; /* Decreased image width for smaller screens */
         margin-right: 10px;
     }
 }
