@@ -1,80 +1,74 @@
-/* Desktop and Mobile Responsive Design */
-
 /* Container */
 .container {
-    max-width: 1200px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add some padding to the sides */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space elements evenly across the container */
-    align-items: center; /* Align items vertically in the center */
+    max-width: 100%; /* Adjusted for mobile */
+    padding: 20px; /* Adjusted for mobile */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center content horizontally */
 }
 
 /* Heading */
 h1, h2 {
-    text-align: center; /* Align headings in the center */
-    font-size: 2rem; /* Adjust font size for desktop */
+    text-align: center;
+    font-size: 1.5rem; /* Adjusted for mobile */
 }
 
 /* Vehicle List */
 .vehicle-list {
-    flex-basis: 45%; /* Set the width of the vehicle list */
-    margin-right: 20px; /* Add some space between sections */
+    width: 100%; /* Adjusted for mobile */
+    margin-bottom: 20px; /* Add space between sections */
 }
 
 /* Reservation Form */
 .reservation-form {
-    flex-basis: 45%; /* Set the width of the reservation form */
+    width: 100%; /* Adjusted for mobile */
 }
 
 /* Form Inputs */
 input[type="text"],
 input[type="date"],
 input[type="time"],
-select {
-    width: calc(100% - 20px); /* Set width to 100% minus padding */
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-/* Button */
+select,
 button {
-    width: calc(100% - 20px); /* Set width to 100% minus padding */
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
+    width: 100%; /* Adjusted for mobile */
+    margin-bottom: 15px; /* Adjust spacing between inputs */
 }
 
 /* Responsive Typography */
-h1, h2 {
-    font-size: 2rem; /* Adjust font size for desktop */
-}
-
-/* Desktop Styles */
 @media only screen and (min-width: 768px) {
-    /* Adjustments for desktop screens */
+    /* Desktop Styles */
 
-    /* Vehicle List */
-    .vehicle-list {
-        margin-right: 10px; /* Adjust margin for better spacing */
+    /* Container */
+    .container {
+        flex-direction: row; /* Revert to horizontal layout for larger screens */
+        justify-content: space-between; /* Space elements evenly */
+        align-items: flex-start; /* Align items at the start */
     }
 
-    /* Reservation Form */
-    .reservation-form {
-        margin-left: 10px; /* Adjust margin for better spacing */
+    /* Adjustments for headings */
+    h1, h2 {
+        font-size: 2rem; /* Revert to original size for desktop */
+    }
+
+    /* Adjustments for form inputs */
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select {
+        width: calc(50% - 10px); /* Adjust width for better layout */
+        margin-bottom: 10px; /* Reset margin */
+    }
+
+    /* Button */
+    button {
+        width: calc(50% - 10px); /* Adjust width for better layout */
+        margin-top: 0; /* Reset margin */
     }
 
     /* Adjust image size */
     .vehicle-list img {
-        width: 80px;
-        height: 80px;
+        width: 100px; /* Adjusted for larger screens */
+        height: 100px; /* Adjusted for larger screens */
         margin-right: 10px;
     }
 }
