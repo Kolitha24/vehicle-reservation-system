@@ -1,5 +1,7 @@
 [
     { "id": 1, "name": "Lorry", "image": "lorry.png" },
-    { "id": 2, "name": "Canter", "image": "canter.png" }
-    // Add more vehicles as needed
+    { "id": 2, "name": "Canter", "image": "canter.png" },
+    { "id": 3, "name": "Boom Truck", "image": "boom_truck.png" },
+    { "id": 4, "name": "Three Wheeler", "image": "three_wheeler.png" },
+    { "id": 5, "name": "Motor Bike", "image": "motor_bike.png" }
 ]
