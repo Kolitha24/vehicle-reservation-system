@@ -54,17 +54,35 @@ function handleFormSubmission(event) {
         return;
     }
 
-    // Display success message
-    alert("Reservation successful!");
+    // Generate a ticket
+    const department = document.getElementById("department").value;
+    const date = document.getElementById("date").value;
+    const startTime = document.getElementById("start-time").value;
+    const endTime = document.getElementById("end-time").value;
+    const vehicleName = vehicles.find(vehicle => vehicle.id === selectedVehicleId).name;
+
+    const ticket = {
+        token: generateToken(),
+        vehicle: vehicleName,
+        department,
+        date,
+        startTime,
+        endTime
+    };
+
+    displayTicket(ticket);
 }
 
-// Function to initialize the page
-function init() {
-    populateVehicleList();
-    // Add event listener to the form
-    const form = document.getElementById("reservation-form");
-    form.addEventListener("submit", handleFormSubmission);
+// Function to generate a random token
+function generateToken() {
+    return Math.random().toString(36).substr(2, 9).toUpperCase();
 }
 
-// Initialize the page
-init();
+// Function to display the ticket
+function displayTicket(ticket) {
+    const ticketContainer = document.createElement("div");
+    ticketContainer.className = "ticket";
+
+    ticketContainer.innerHTML = `
+        <h2>Reservation Ticket</h2>
+        <p><strong>Token:</strong> $
