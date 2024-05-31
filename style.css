@@ -71,12 +71,17 @@ button {
 }
 
 /* Ticket Styling */
-.ticket {
+.ticket-container {
+    display: none; /* Hide by default */
     margin-top: 20px;
     padding: 20px;
     border: 1px solid #007BFF;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+.ticket-container.active {
+    display: block; /* Show when active */
 }
 
 .ticket h2 {
