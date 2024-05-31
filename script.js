@@ -34,10 +34,20 @@ function populateVehicleSelect() {
     });
 }
 
+// Function to handle form submission
+function handleFormSubmission(event) {
+    event.preventDefault(); // Prevent the default form submission
+    // Display success message
+    alert("Reservation successful!");
+}
+
 // Function to initialize the page
 function init() {
     populateVehicleList();
     populateVehicleSelect();
+    // Add event listener to the form
+    const form = document.getElementById("reservation-form");
+    form.addEventListener("submit", handleFormSubmission);
 }
 
 // Initialize the page
