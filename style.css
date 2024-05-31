@@ -1,0 +1,80 @@
+/* Desktop and Mobile Responsive Design */
+
+/* Container */
+.container {
+    max-width: 1200px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding to the sides */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space elements evenly across the container */
+    align-items: center; /* Align items vertically in the center */
+}
+
+/* Heading */
+h1, h2 {
+    text-align: center; /* Align headings in the center */
+    font-size: 2rem; /* Adjust font size for desktop */
+}
+
+/* Vehicle List */
+.vehicle-list {
+    flex-basis: 45%; /* Set the width of the vehicle list */
+    margin-right: 20px; /* Add some space between sections */
+}
+
+/* Reservation Form */
+.reservation-form {
+    flex-basis: 45%; /* Set the width of the reservation form */
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    width: calc(100% - 20px); /* Set width to 100% minus padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Button */
+button {
+    width: calc(100% - 20px); /* Set width to 100% minus padding */
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Typography */
+h1, h2 {
+    font-size: 2rem; /* Adjust font size for desktop */
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 768px) {
+    /* Adjustments for desktop screens */
+
+    /* Vehicle List */
+    .vehicle-list {
+        margin-right: 10px; /* Adjust margin for better spacing */
+    }
+
+    /* Reservation Form */
+    .reservation-form {
+        margin-left: 10px; /* Adjust margin for better spacing */
+    }
+
+    /* Adjust image size */
+    .vehicle-list img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+}

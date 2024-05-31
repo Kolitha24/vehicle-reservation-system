@@ -1,0 +1,17 @@
+{
+  "vehicles": [
+    {
+      "id": 1,
+      "type": "Lorry",
+      "status": "Available",
+      "driver": "Waruna"
+    },
+    {
+      "id": 2,
+      "type": "Canter",
+      "status": "Available",
+      "driver": "Waruna"
+    },
+    ...
+  ]
+}
