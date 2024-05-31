@@ -1,5 +1,5 @@
 [
-    { "id": 1, "name": "Lorry", "image": "lorry.jpg" },
-    { "id": 2, "name": "Canter", "image": "canter.jpg" }
+    { "id": 1, "name": "Lorry", "image": "lorry.png" },
+    { "id": 2, "name": "Canter", "image": "canter.png" }
     // Add more vehicles as needed
 ]
