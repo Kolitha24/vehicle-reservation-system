@@ -78,10 +78,12 @@ function generateToken() {
     return Math.random().toString(36).substr(2, 9).toUpperCase();
 }
 
-// Function to display the ticket
+// Function to display the ticket in a modal
 function displayTicket(ticket) {
-    const ticketDetails = document.getElementById("ticket-details");
-    ticketDetails.innerHTML = `
+    const modal = document.getElementById("ticket-modal");
+    const ticketInfo = document.getElementById("ticket-info");
+
+    ticketInfo.innerHTML = `
         <h2>Reservation Ticket</h2>
         <p><strong>Token:</strong> ${ticket.token}</p>
         <p><strong>Vehicle:</strong> ${ticket.vehicle}</p>
@@ -91,8 +93,20 @@ function displayTicket(ticket) {
         <p><strong>End Time:</strong> ${ticket.endTime}</p>
     `;
 
-    const modal = document.getElementById("ticket-modal");
     modal.style.display = "block";
+
+    // Close the modal when the user clicks on the close button
+    const closeButton = document.getElementsByClassName("close")[0];
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
 
 // Function to initialize the page
@@ -101,18 +115,7 @@ function init() {
     // Add event listener to the form
     const form = document.getElementById("reservation-form");
     form.addEventListener("submit", handleFormSubmission);
+}
 
-    // Get the modal
-    const modal = document.getElementById("ticket-modal");
-
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    };
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target ==
+// Initialize the page
+init();
