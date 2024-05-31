@@ -80,8 +80,8 @@ function generateToken() {
 
 // Function to display the ticket
 function displayTicket(ticket) {
-    const ticketContainer = document.getElementById("ticket-container");
-    ticketContainer.innerHTML = `
+    const ticketDetails = document.getElementById("ticket-details");
+    ticketDetails.innerHTML = `
         <h2>Reservation Ticket</h2>
         <p><strong>Token:</strong> ${ticket.token}</p>
         <p><strong>Vehicle:</strong> ${ticket.vehicle}</p>
@@ -91,7 +91,8 @@ function displayTicket(ticket) {
         <p><strong>End Time:</strong> ${ticket.endTime}</p>
     `;
 
-    ticketContainer.classList.add("active");
+    const modal = document.getElementById("ticket-modal");
+    modal.style.display = "block";
 }
 
 // Function to initialize the page
@@ -100,7 +101,18 @@ function init() {
     // Add event listener to the form
     const form = document.getElementById("reservation-form");
     form.addEventListener("submit", handleFormSubmission);
-}
 
-// Initialize the page
-init();
+    // Get the modal
+    const modal = document.getElementById("ticket-modal");
+
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target ==
