@@ -70,6 +70,19 @@ button {
     box-sizing: border-box;
 }
 
+/* Ticket Styling */
+.ticket {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.ticket h2 {
+    margin-top: 0;
+}
+
 /* Responsive Styling */
 @media only screen and (min-width: 600px) {
     /* Adjustments for larger screens */
