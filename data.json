@@ -1,17 +1,5 @@
-{
-  "vehicles": [
-    {
-      "id": 1,
-      "type": "Lorry",
-      "status": "Available",
-      "driver": "Waruna"
-    },
-    {
-      "id": 2,
-      "type": "Canter",
-      "status": "Available",
-      "driver": "Waruna"
-    },
-    ...
-  ]
-}
+[
+    { "id": 1, "name": "Lorry", "image": "lorry.jpg" },
+    { "id": 2, "name": "Canter", "image": "canter.jpg" }
+    // Add more vehicles as needed
+]
