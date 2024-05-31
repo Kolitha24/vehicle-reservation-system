@@ -1,7 +1,10 @@
 // Sample vehicle data with images
 const vehicles = [
-    { id: 1, name: "Lorry", image: "lorry.jpg" },
-    { id: 2, name: "Canter", image: "canter.jpg" },
+    { id: 1, name: "Lorry", image: "lorry.png" },
+    { id: 2, name: "Canter", image: "canter.png" },
+    { id: 3, name: "boom_truck", image: "boom_truck.png" },
+    { id: 4, name: "motor_bike", image: "motor_bike.png" }
+    { id: 5, name: "three_wheeler", image: "three_wheeler.png" }
     // Add more vehicles as needed
 ];
 
