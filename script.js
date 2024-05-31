@@ -2,6 +2,9 @@
 const vehicles = [
     { id: 1, name: "Lorry" },
     { id: 2, name: "Canter" },
+    { id: 3, name: "Batta" },
+    { id: 4, name: "boom truck" },
+    { id: 5, name: "Moto Bike" },
     // Add more vehicles as needed
 ];
 
