@@ -2,10 +2,9 @@
 const vehicles = [
     { id: 1, name: "Lorry", image: "lorry.png" },
     { id: 2, name: "Canter", image: "canter.png" },
-    { id: 3, name: "boom_truck", image: "boom_truck.png" },
-    { id: 4, name: "motor_bike", image: "motor_bike.png" }
-    { id: 5, name: "three_wheeler", image: "three_wheeler.png" }
-    // Add more vehicles as needed
+    { id: 3, name: "Boom Truck", image: "boom_truck.png" },
+    { id: 4, name: "Three Wheeler", image: "three_wheeler.png" },
+    { id: 5, name: "Motor Bike", image: "motor_bike.png" }
 ];
 
 // Function to populate the vehicle list
@@ -24,9 +23,21 @@ function populateVehicleList() {
     });
 }
 
+// Function to populate the vehicle select dropdown
+function populateVehicleSelect() {
+    const vehicleSelect = document.getElementById("vehicle-select");
+    vehicles.forEach(vehicle => {
+        const option = document.createElement("option");
+        option.value = vehicle.id;
+        option.textContent = vehicle.name;
+        vehicleSelect.appendChild(option);
+    });
+}
+
 // Function to initialize the page
 function init() {
     populateVehicleList();
+    populateVehicleSelect();
 }
 
 // Initialize the page
