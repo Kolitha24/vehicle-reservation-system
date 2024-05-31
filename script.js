@@ -80,9 +80,27 @@ function generateToken() {
 
 // Function to display the ticket
 function displayTicket(ticket) {
-    const ticketContainer = document.createElement("div");
-    ticketContainer.className = "ticket";
-
+    const ticketContainer = document.getElementById("ticket-container");
     ticketContainer.innerHTML = `
         <h2>Reservation Ticket</h2>
-        <p><strong>Token:</strong> $
+        <p><strong>Token:</strong> ${ticket.token}</p>
+        <p><strong>Vehicle:</strong> ${ticket.vehicle}</p>
+        <p><strong>Department:</strong> ${ticket.department}</p>
+        <p><strong>Date:</strong> ${ticket.date}</p>
+        <p><strong>Start Time:</strong> ${ticket.startTime}</p>
+        <p><strong>End Time:</strong> ${ticket.endTime}</p>
+    `;
+
+    ticketContainer.classList.add("active");
+}
+
+// Function to initialize the page
+function init() {
+    populateVehicleList();
+    // Add event listener to the form
+    const form = document.getElementById("reservation-form");
+    form.addEventListener("submit", handleFormSubmission);
+}
+
+// Initialize the page
+init();
