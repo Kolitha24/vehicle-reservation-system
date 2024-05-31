@@ -1,27 +1,27 @@
 /* Container */
 .container {
-    max-width: 100%; /* Adjusted for mobile */
-    padding: 20px; /* Adjusted for mobile */
+    max-width: 100%;
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center content horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Heading */
 h1, h2 {
     text-align: center;
-    font-size: 1.5rem; /* Adjusted for mobile */
+    font-size: 1.5rem;
 }
 
 /* Vehicle List */
 .vehicle-list {
-    width: 100%; /* Adjusted for mobile */
-    margin-bottom: 20px; /* Add space between sections */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Reservation Form */
 .reservation-form {
-    width: 100%; /* Adjusted for mobile */
+    width: 100%;
 }
 
 /* Form Inputs */
@@ -30,24 +30,23 @@ input[type="date"],
 input[type="time"],
 select,
 button {
-    width: 100%; /* Adjusted for mobile */
-    margin-bottom: 15px; /* Adjust spacing between inputs */
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 /* Responsive Typography */
 @media only screen and (min-width: 768px) {
     /* Desktop Styles */
 
-    /* Container */
     .container {
-        flex-direction: row; /* Revert to horizontal layout for larger screens */
-        justify-content: space-between; /* Space elements evenly */
-        align-items: flex-start; /* Align items at the start */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     /* Adjustments for headings */
     h1, h2 {
-        font-size: 2rem; /* Revert to original size for desktop */
+        font-size: 2rem;
     }
 
     /* Adjustments for form inputs */
@@ -55,20 +54,20 @@ button {
     input[type="date"],
     input[type="time"],
     select {
-        width: calc(50% - 10px); /* Adjust width for better layout */
-        margin-bottom: 10px; /* Reset margin */
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
     }
 
     /* Button */
     button {
-        width: calc(50% - 10px); /* Adjust width for better layout */
-        margin-top: 0; /* Reset margin */
+        width: calc(50% - 10px);
+        margin-top: 0;
     }
 
     /* Adjust image size */
     .vehicle-list img {
-        width: 100px; /* Adjusted for larger screens */
-        height: 100px; /* Adjusted for larger screens */
+        width: 60px; /* Decreased image width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
         margin-right: 10px;
     }
 }
